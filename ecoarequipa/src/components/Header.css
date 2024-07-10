@@ -1,0 +1,42 @@
+/* components/Header.css */
+.header {
+  background-color: #4CAF50; /* Verde */
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+}
+
+.header .logo img {
+  width: 60px; /* Ajusta el tamaño del logo según sea necesario */
+  margin-right: 10px;
+}
+
+.header .nav {
+  margin-left: auto; /* Alinea la lista a la derecha */
+}
+
+.header .nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.header .nav ul li {
+  margin-left: 20px; /* Espacio entre elementos de la lista */
+}
+
+.header .nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.header .nav ul li a:hover {
+  text-decoration: underline;
+}
