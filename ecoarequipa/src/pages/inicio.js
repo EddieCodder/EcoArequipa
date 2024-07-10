@@ -4,21 +4,16 @@ import '../styles.css'; // Asegúrate de importar correctamente los estilos gene
 const Inicio = () => {
   return (
     <div className="inicio">
-      <section className="hero">
-        <div className="hero-content">
+      <section className="background-section">
+        <div className="hero">
           <h1>Bienvenidos a EcoArequipa</h1>
-          {/* Aquí puedes agregar una descripción breve */}
           <p>¡Explora y aprende sobre la importancia de cuidar nuestro medio ambiente!</p>
         </div>
       </section>
-      <section className="about">
-        <div className="about-content">
-          <h2>Nuestro Proyecto</h2>
-          <p>
-            EcoArequipa se dedica a promover la conciencia ambiental entre los niños y jóvenes,
-            utilizando juegos interactivos y contenido educativo.
-          </p>
-          {/* Agrega más contenido según sea necesario */}
+      <section className="objective-section">
+        <div className="objective-content">
+          <h2>Nuestro Objetivo</h2>
+          <h3>EcoArequipa se dedica a promover la conciencia ambiental entre los niños utilizando juegos interactivos y contenido educativo usando escenarios de nuestra linda ciudad.</h3>
         </div>
       </section>
     </div>
