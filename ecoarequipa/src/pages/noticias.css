@@ -1,0 +1,14 @@
+.noticias {
+    padding: 20px;
+  }
+  
+  .noticias h1 {
+    font-size: 2rem;
+    color: green;
+  }
+  
+  .noticias p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  

@@ -1,13 +1,11 @@
-// inicio.js
 import React from 'react';
-import './inicio.css'; // Archivo de estilos para esta página
+import './inicio.css';
 
 const Inicio = () => {
   return (
     <div className="inicio">
       <h1>Bienvenidos a EcoArequipa</h1>
-      <p>Esta es la página de inicio de nuestra plataforma educativa sobre el cuidado medioambiental de Arequipa.</p>
-      {/* Aquí puedes añadir más contenido según sea necesario */}
+      <p>Este es el contenido de la página de inicio.</p>
     </div>
   );
 }

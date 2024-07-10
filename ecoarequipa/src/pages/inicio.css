@@ -1,0 +1,14 @@
+.inicio {
+    padding: 20px;
+  }
+  
+  .inicio h1 {
+    font-size: 2rem;
+    color: green;
+  }
+  
+  .inicio p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
