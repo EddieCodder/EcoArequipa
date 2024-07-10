@@ -1,0 +1,99 @@
+/* styles.css */
+
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  }
+  
+  /* Estilos para App */
+  .App {
+    text-align: center;
+  }
+  
+  /* Estilos para Header */
+  .header {
+    background-color: #4CAF50; /* Verde */
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header .logo img {
+    width: 60px; /* Ajusta el tamaño del logo según sea necesario */
+    margin-right: 10px;
+  }
+  
+  .header .nav {
+    margin-left: auto; /* Alinea la lista a la derecha */
+  }
+  
+  .header .nav ul {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  .header .nav ul li {
+    margin-left: 20px; /* Espacio entre elementos de la lista */
+  }
+  
+  .header .nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .header .nav ul li a:hover {
+    text-decoration: underline;
+    color: #FFD700; /* Color dorado en hover */
+  }
+  
+  /* Estilos para Main */
+  .main {
+    padding: 2rem;
+  }
+  
+  .main .hero {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .main .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .main .hero p {
+    font-size: 1.5rem;
+    color: #666;
+  }
+  
+  /* Estilos para Footer */
+  .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Estilos para páginas */
+  .page {
+    padding: 2rem;
+  }
+  

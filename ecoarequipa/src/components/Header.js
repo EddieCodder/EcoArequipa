@@ -1,6 +1,6 @@
 // components/Header.js
 import React from 'react';
-import './Header.css'; // Importa el archivo de estilos CSS
+import '../styles.css';
 import logo from '../assets/logoEcoArequipa.png'; // Importa la imagen del logo
 
 const Header = () => {
@@ -8,7 +8,7 @@ const Header = () => {
     <header className="header">
       <div className="logo">
         <img src={logo} alt="Logo" />
-        <span>Nombre de tu Aplicación</span>
+        <span>EcoArequipa</span>
       </div>
       <nav className="nav">
         <ul>

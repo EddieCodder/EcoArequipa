@@ -1,5 +1,5 @@
 import React from 'react';
-import './juegos.css';
+import '../styles.css';
 
 const Juegos = () => {
   return (
