@@ -1,15 +1,12 @@
-// components/Main.js
 import React from 'react';
-import './Main.css';
+import '../App.css';
 
-const Main = () => {
+function Main() {
   return (
-    <main className="main">
-      <section className="hero">
-        <h1>Bienvenido a EcoArequipa</h1>
-        <p>Descubre cómo puedes ayudar a cuidar el medio ambiente en Arequipa.</p>
-      </section>
-      {/* Agrega más secciones según sea necesario */}
+    <main className="App-main">
+      {/* Contenido principal de tu aplicación */}
+      <h1>Bienvenidos a EcoArequipa</h1>
+      <p>Aquí puedes añadir el contenido principal de tu aplicación.</p>
     </main>
   );
 }

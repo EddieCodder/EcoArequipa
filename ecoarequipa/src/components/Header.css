@@ -1,11 +1,11 @@
 /* components/Header.css */
 .header {
-  background-color: #4CAF50; /* Verde */
-  color: #fff;
-  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
 }
 
 .header .logo {
@@ -14,12 +14,8 @@
 }
 
 .header .logo img {
-  width: 60px; /* Ajusta el tamaño del logo según sea necesario */
+  width: 40px; /* Ajusta el tamaño del logo según sea necesario */
   margin-right: 10px;
-}
-
-.header .nav {
-  margin-left: auto; /* Alinea la lista a la derecha */
 }
 
 .header .nav ul {
@@ -28,7 +24,7 @@
 }
 
 .header .nav ul li {
-  margin-left: 20px; /* Espacio entre elementos de la lista */
+  margin-right: 20px;
 }
 
 .header .nav ul li a {
