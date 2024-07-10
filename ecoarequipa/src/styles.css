@@ -118,7 +118,7 @@ code {
 }
 
 .inicio .background-section {
-  background-image: url('./assets/fondo.jpeg'); /* Cambia la ruta por la de tu imagen */
+  background-image: url('./assets/fondo.jpg'); /* Cambia la ruta por la de tu imagen */
   background-size: cover;
   background-position: center;
   width: 100%; /* Ocupa todo el ancho disponible */
@@ -145,12 +145,14 @@ code {
   font-family: 'Arial', sans-serif; /* Cambia la fuente del texto */
 }
 
+/*
 .inicio .objective-section {
-  width: 100%; /* Ocupa todo el ancho disponible */
+  width: 100%;
   padding: 2rem;
-  background-color: #f1f1f1; /* Cambia el color de fondo del área del objetivo si es necesario */
-  border-radius: 10px; /* Añade bordes redondeados si deseas */
-  margin-top: 2rem; /* Ajusta el margen superior según sea necesario */
+  background-color: #f1f1f1;
+  border-radius: 10px; 
+  margin-top: 2rem;
   text-align: center;
-  color: #333; /* Color de texto oscuro para que resalte sobre el fondo claro */
+  color: #333;
 }
+*/

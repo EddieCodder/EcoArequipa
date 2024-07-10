@@ -12,8 +12,7 @@ const Inicio = () => {
       </section>
       <section className="objective-section">
         <div className="objective-content">
-          <h2>Nuestro Objetivo</h2>
-          <h3>EcoArequipa se dedica a promover la conciencia ambiental entre los niños utilizando juegos interactivos y contenido educativo usando escenarios de nuestra linda ciudad.</h3>
+          <h1>Nuestro Objetivo</h1>
         </div>
       </section>
     </div>
