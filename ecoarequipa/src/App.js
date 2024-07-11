@@ -7,6 +7,10 @@ import Inicio from './pages/inicio';
 import Juegos from './pages/juegos';
 import Noticias from './pages/noticias';
 import Nosotros from './pages/nosotros';
+import ReciclayReutiliza from './games/ReciclaYReutiliza';
+import AhorraEnergia from './games/AhorraEnergia';
+import AventuraEnLaNaturaleza from './games/AventuraEnLaNaturaleza';
+import ElCicloDelAgua from './games/CicloDelAgua';
 
 function App() {
   return (
@@ -18,6 +22,10 @@ function App() {
           <Route path="/juegos" element={<Juegos />} />
           <Route path="/noticias" element={<Noticias />} />
           <Route path="/nosotros" element={<Nosotros />} />
+          <Route path="/reciclayreutiliza" element={<ReciclayReutiliza />} />
+          <Route path="/ahorraenergia" element={<AhorraEnergia />} />
+          <Route path="/aventuraenlanaturaleza" element={<AventuraEnLaNaturaleza />} />
+          <Route path="/elciclodelagua" element={<ElCicloDelAgua />} />
         </Routes>
         <Footer />
       </div>
