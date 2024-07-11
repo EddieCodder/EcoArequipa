@@ -41,28 +41,28 @@ const ListaDeJuegos = () => {
       link: '/elciclodelagua'
     },
     {
-      title: 'Huerto Orgánico',
-      description: 'Un juego donde los niños pueden plantar, cuidar y cosechar un huerto orgánico, aprendiendo sobre la agricultura sostenible y la importancia de los alimentos orgánicos.',
+      title: 'Huertos de Sabandía',
+      description: 'Un juego donde los niños pueden plantar, cuidar y cosechar un huerto en Sabandía, aprendiendo sobre la agricultura sostenible y la importancia de los alimentos orgánicos.',
       image: images['game5.jpg'],
-      link: '/'
+      link: '/huertos-sabandia'
     },
     {
-      title: 'Detective de la Contaminación',
-      description: 'Investiga y encuentra fuentes de contaminación y toma medidas para reducirla.',
+      title: 'Detective de la Contaminación en Arequipa',
+      description: 'Investiga y encuentra fuentes de contaminación en Arequipa y toma medidas para reducirla.',
       image: images['game6.jpg'],
-      link: '/'
+      link: '/detective-contaminacion-arequipa'
     },
     {
-      title: 'Energías Renovables',
-      description: 'Aprende sobre las diferentes fuentes de energía renovable y su importancia.',
+      title: 'Limpieza del Río Chili',
+      description: 'Un juego donde los niños deben ayudar a limpiar el río Chili, aprendiendo sobre la importancia de mantener nuestros ríos limpios.',
       image: images['game7.jpg'],
-      link: '/'
+      link: '/limpieza-rio-chili'
     },
     {
-      title: 'Guardianes del Planeta',
-      description: 'Conviértete en un guardián del planeta y protege la naturaleza de los peligros que la amenazan.',
+      title: 'Guardianes de Arequipa',
+      description: 'Conviértete en un guardián de Arequipa y protege la naturaleza de los peligros que la amenazan en la región.',
       image: images['game8.jpg'],
-      link: '/'
+      link: '/guardianes-arequipa'
     },
   ];
   

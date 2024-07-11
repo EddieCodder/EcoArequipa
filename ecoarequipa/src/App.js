@@ -11,6 +11,10 @@ import ReciclayReutiliza from './games/ReciclaYReutiliza';
 import AhorraEnergia from './games/AhorraEnergia';
 import AventuraEnLaNaturaleza from './games/AventuraEnLaNaturaleza';
 import ElCicloDelAgua from './games/CicloDelAgua';
+import LimpiezaRioChili from './games/LimpiezaRioChili';
+import DetectiveContaminacionArequipa from './games/DetectiveContaminacionArequipa';
+import GuardianesArequipa from './games/GuardianesArequipa';
+import HuertosSabandia from './games/HuertosSabandia';
 
 function App() {
   return (
@@ -26,6 +30,10 @@ function App() {
           <Route path="/ahorraenergia" element={<AhorraEnergia />} />
           <Route path="/aventuraenlanaturaleza" element={<AventuraEnLaNaturaleza />} />
           <Route path="/elciclodelagua" element={<ElCicloDelAgua />} />
+          <Route path="/limpieza-rio-chili" element={<LimpiezaRioChili />} />
+          <Route path="/detective-contaminacion-arequipa" element={<DetectiveContaminacionArequipa />} />
+          <Route path="/guardianes-arequipa" element={<GuardianesArequipa />} />
+          <Route path="/huertos-sabandia" element={<HuertosSabandia />} />
         </Routes>
         <Footer />
       </div>
