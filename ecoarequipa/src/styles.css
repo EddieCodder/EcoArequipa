@@ -156,3 +156,79 @@ code {
   color: #333;
 }
 */
+
+/* Estilo 1 para juegos
+.juegos {
+  padding: 20px;
+}
+
+.juego {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.juego-image {
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+  margin: 0 auto;
+  display: block;
+}
+*/
+/* Estilo 2 para juegos 
+.juegos {
+  padding: 20px;
+}
+
+.lista-de-juegos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.juego {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.juego-image {
+  width: 100%;
+  height: auto;
+  max-width: 150px;
+  margin: 0 auto 10px;
+  display: block;
+}
+*/
+
+/* Estilo 3 para juegos */
+.juegos {
+  padding: 20px;
+}
+
+.lista-de-juegos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px;
+}
+
+.juego {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.juego-image {
+  width: 100%;
+  height: auto;
+  max-width: 150px;
+  margin: 0 auto 10px;
+  display: block;
+}
