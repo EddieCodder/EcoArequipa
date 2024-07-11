@@ -1,47 +1,56 @@
 import React from 'react';
 import Juego from './Juego';
 
+import game1 from '../assets/game1.jpg';
+import game2 from '../assets/game2.jpg';
+import game3 from '../assets/game3.jpg';
+import game4 from '../assets/game4.jpg';
+import game5 from '../assets/game5.jpg';
+import game6 from '../assets/game6.jpg';
+import game7 from '../assets/game7.jpg';
+import game8 from '../assets/game8.jpg';
+
 const ListaDeJuegos = () => {
   const juegos = [
     {
       title: 'Recicla y Reutiliza',
       description: 'Un juego que enseña a los niños la importancia de reciclar y cómo clasificar los diferentes tipos de residuos (papel, plástico, vidrio, orgánico, etc.).',
-      image: 'ruta_a_la_imagen_del_juego1.jpg'
+      image: game1
     },
     {
       title: 'Ahorra Energía',
       description: 'Un juego en el que los niños deben identificar aparatos electrónicos y luces que se han dejado encendidos y apagarlos para ahorrar energía.',
-      image: 'ruta_a_la_imagen_del_juego2.jpg'
+      image: game2
     },
     {
       title: 'Aventura en la Naturaleza',
       description: 'Un juego de exploración en el que los niños deben encontrar diferentes plantas y animales, aprendiendo sobre su importancia y cómo protegerlos.',
-      image: 'ruta_a_la_imagen_del_juego3.jpg'
+      image: game3
     },
     {
       title: 'El Ciclo del Agua',
       description: 'Un juego interactivo que explica el ciclo del agua de una manera divertida y visual, enseñando a los niños sobre la importancia del agua y cómo conservarla.',
-      image: 'ruta_a_la_imagen_del_juego4.jpg'
+      image: game4
     },
     {
       title: 'Huerto Orgánico',
       description: 'Un juego donde los niños pueden plantar, cuidar y cosechar un huerto orgánico, aprendiendo sobre la agricultura sostenible y la importancia de los alimentos orgánicos.',
-      image: 'ruta_a_la_imagen_del_juego5.jpg'
+      image: game5
     },
     {
       title: 'Detective de la Contaminación',
       description: 'Investiga y encuentra fuentes de contaminación y toma medidas para reducirla.',
-      image: 'ruta_a_la_imagen_del_juego6.jpg'
+      image: game6
     },
     {
       title: 'Energías Renovables',
       description: 'Aprende sobre las diferentes fuentes de energía renovable y su importancia.',
-      image: 'ruta_a_la_imagen_del_juego7.jpg'
+      image: game7
     },
     {
       title: 'Guardianes del Planeta',
       description: 'Conviértete en un guardián del planeta y protege la naturaleza de los peligros que la amenazan.',
-      image: 'ruta_a_la_imagen_del_juego8.jpg'
+      image: game8
     },
   ];
 
