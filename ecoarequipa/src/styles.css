@@ -6,8 +6,15 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  position: relative; /* Asegura que el body tenga posición relativa */
+  display: flex;
+  flex-direction: column;
   min-height: 100vh; /* Mínimo alto del body para ocupar toda la pantalla */
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 code {
@@ -17,6 +24,9 @@ code {
 /* Estilos para App */
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 /* Estilos para Header */
@@ -74,6 +84,7 @@ code {
 /* Estilos para Main */
 .main {
   padding: 2rem;
+  flex-grow: 1;
 }
 
 .main .hero {
@@ -97,18 +108,14 @@ code {
   color: #fff;
   text-align: center;
   padding: 1rem;
-  position: absolute; /* Posición absoluta para fijar en la parte inferior */
-  bottom: 0;
   width: 100%;
+  margin-top: auto; /* Asegura que el footer esté al final del contenedor flex */
 }
 
 /* Estilos específicos para la página de inicio */
 .inicio {
-  /* Elimina el fondo de toda la página */
-  background: none;
-
-  /* Establece un tamaño mínimo para evitar que el contenido se solape */
-  min-height: 100vh;
+  background: none; /* Elimina el fondo de toda la página */
+  min-height: 100vh; /* Establece un tamaño mínimo para evitar que el contenido se solape */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -145,7 +152,6 @@ code {
   font-family: 'Arial', sans-serif; /* Cambia la fuente del texto */
 }
 
-/*
 .inicio .objective-section {
   width: 100%;
   padding: 2rem;
@@ -155,7 +161,27 @@ code {
   text-align: center;
   color: #333;
 }
-*/
+
+.inicio .content-section,
+.inicio .activities-section,
+.inicio .contact-section {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  padding: 2rem;
+  margin-top: 2rem; /* Ajusta el margen superior según sea necesario */
+  text-align: center;
+}
+
+.inicio .content-section {
+  background-color: #fff; /* Color de fondo para la sección de contenido */
+}
+
+.inicio .activities-section {
+  background-color: #e9e9e9; /* Color de fondo para la sección de actividades */
+}
+
+.inicio .contact-section {
+  background-color: #d9d9d9; /* Color de fondo para la sección de contacto */
+}
 
 /* Estilo 1 para juegos
 .juegos {
@@ -178,6 +204,7 @@ code {
   display: block;
 }
 */
+
 /* Estilo 2 para juegos 
 .juegos {
   padding: 20px;
