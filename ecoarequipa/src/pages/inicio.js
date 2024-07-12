@@ -20,7 +20,7 @@ const Inicio = () => {
         </div>
       </section>
 
-      <a href="/objetivo" className="section-link">
+      <a href="/" className="section-link">
         <section className="objective-section section">
           <div className="section-content">
             <div className="section-text">
