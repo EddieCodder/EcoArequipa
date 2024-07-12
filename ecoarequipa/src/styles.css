@@ -255,3 +255,78 @@ code {
   display: inline-flex;
   text-decoration: none;
 }
+
+/***************************************************************************/
+/* Estilos para la sección de juegos */
+
+.juegos {
+  font-family: 'Comic Sans MS', sans-serif;
+  font-size: 25px;
+  padding: 20px;
+  text-align: center;
+}
+
+.lista-de-juegos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.juego {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  background-color: #f9f9f9;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.juego:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.juego-image {
+  width: 100%;
+  height: auto;
+  max-width: 150px;
+  margin: 0 auto 10px;
+  display: block;
+  border-radius: 10px;
+}
+
+.juego h2 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.juego p {
+  font-size: 14px;
+  color: #666;
+}
+
+.juego-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.juego-button:hover {
+  background-color: #45a049;
+  transform: scale(1.1);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.juego {
+  animation: fadeIn 0.5s ease-in-out;
+}
