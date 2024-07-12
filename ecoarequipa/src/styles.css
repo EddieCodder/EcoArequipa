@@ -40,6 +40,8 @@ code {
   justify-content: space-between;
   align-items: center;
   max-width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+
 }
 
 .header .header-title {
@@ -159,142 +161,69 @@ code {
   border-radius: 10px; /* Esquinas redondeadas */
 }
 
-/* Estilos para la sección de Objetivo */
+/* Estilos para las secciones comunes */
+.section {
+  width: calc(100% - 40px); /* Ocupa casi todo el ancho disponible con margen */
+  padding: 20px; /* Añade espacio interno */
+  margin-top: 40px; /* Espacio superior */
+  font-family: 'Comic Sans MS', sans-serif; /* Fuente */
+  border-radius: 20px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  color: #1a237e; /* Color de texto azul oscuro */
+  display: flex;
+  justify-content: space-between; /* Alinea elementos en el centro */
+  align-items: center; /* Alinea verticalmente */
+}
+
+.section-left {
+  text-align: left; /* Alinea a la izquierda */
+}
+
+.section-right {
+  text-align: right; /* Alinea a la derecha */
+}
+
+/* Estilos específicos para cada sección */
 .objective-section {
   background-color: #bbdefb; /* Fondo azul claro */
-  width: calc(100% - 40px); /* Ocupa casi todo el ancho disponible con margen */
-  padding: 20px; /* Añade espacio interno */
-  margin-top: 40px; /* Espacio superior */
-  text-align: left; /* Alinea a la izquierda */
-  font-family: 'Comic Sans MS', sans-serif; /* Fuente */
-  border-radius: 20px; /* Esquinas redondeadas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-  color: #1a237e; /* Color de texto azul oscuro */
-  display: flex;
-  justify-content: space-between; /* Alinea elementos en el centro */
-  align-items: center; /* Alinea verticalmente */
 }
 
-.objective-section img {
-  max-width: 200px; /* Tamaño máximo de la imagen */
-  margin-left: 20px; /* Margen izquierdo */
-}
-
-.objective-section .section-content {
-  flex-grow: 1; /* Ocupa todo el espacio disponible */
-}
-
-.objective-section .section-title {
-  font-size: 2rem; /* Tamaño del título aumentado */
-  font-weight: bold; /* Negrita */
-  margin-bottom: 10px; /* Espacio inferior */
-}
-
-.objective-section .section-description {
-  font-size: 1.2rem; /* Tamaño del texto */
-}
-
-/* Estilos para la sección de Juegos */
 .games-section {
   background-color: #c5e1a5; /* Fondo verde claro */
-  width: calc(100% - 40px); /* Ocupa casi todo el ancho disponible con margen */
-  padding: 20px; /* Añade espacio interno */
-  margin-top: 40px; /* Espacio superior */
-  text-align: right; /* Alinea a la derecha */
-  font-family: 'Comic Sans MS', sans-serif; /* Fuente */
-  border-radius: 20px; /* Esquinas redondeadas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-  color: #1a237e; /* Color de texto azul oscuro */
-  display: flex;
-  justify-content: space-between; /* Alinea elementos en el centro */
-  align-items: center; /* Alinea verticalmente */
 }
 
-.games-section img {
-  max-width: 200px; /* Tamaño máximo de la imagen */
-  margin-right: 20px; /* Margen derecho */
-}
-
-.games-section .section-content {
-  flex-grow: 1; /* Ocupa todo el espacio disponible */
-}
-
-.games-section .section-title {
-  font-size: 2rem; /* Tamaño del título aumentado */
-  font-weight: bold; /* Negrita */
-  margin-bottom: 10px; /* Espacio inferior */
-}
-
-.games-section .section-description {
-  font-size: 1.2rem; /* Tamaño del texto */
-}
-
-/* Estilos para la sección de Noticias */
 .news-section {
   background-color: #b2dfdb; /* Fondo celeste claro */
-  width: calc(100% - 40px); /* Ocupa casi todo el ancho disponible con margen */
-  padding: 20px; /* Añade espacio interno */
-  margin-top: 40px; /* Espacio superior */
-  text-align: left; /* Alinea a la izquierda */
-  font-family: 'Comic Sans MS', sans-serif; /* Fuente */
-  border-radius: 20px; /* Esquinas redondeadas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-  color: #1a237e; /* Color de texto azul oscuro */
-  display: flex;
-  justify-content: space-between; /* Alinea elementos en el centro */
-  align-items: center; /* Alinea verticalmente */
 }
 
-.news-section img {
-  max-width: 200px; /* Tamaño máximo de la imagen */
-  margin-left: 20px; /* Margen izquierdo */
-}
-
-.news-section .section-content {
-  flex-grow: 1; /* Ocupa todo el espacio disponible */
-}
-
-.news-section .section-title {
-  font-size: 2rem; /* Tamaño del título aumentado */
-  font-weight: bold; /* Negrita */
-  margin-bottom: 10px; /* Espacio inferior */
-}
-
-.news-section .section-description {
-  font-size: 1.2rem; /* Tamaño del texto */
-}
-
-/* Estilos para la sección de Sobre Nosotros */
 .sobre-nosotros-section {
   background-color: #a5d6a7; /* Fondo verde claro más oscuro */
-  width: calc(100% - 40px); /* Ocupa casi todo el ancho disponible con margen */
-  padding: 20px; /* Añade espacio interno */
-  margin-top: 40px; /* Espacio superior */
-  text-align: right; /* Alinea a la derecha */
-  font-family: 'Comic Sans MS', sans-serif; /* Fuente */
-  border-radius: 20px; /* Esquinas redondeadas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-  color: #1a237e; /* Color de texto azul oscuro */
+}
+
+.section-content {
   display: flex;
-  justify-content: space-between; /* Alinea elementos en el centro */
-  align-items: center; /* Alinea verticalmente */
+  justify-content: space-between;
+  align-items: center;
 }
 
-.sobre-nosotros-section img {
-  max-width: 200px; /* Tamaño máximo de la imagen */
-  margin-right: 20px; /* Margen derecho */
+.section-image {
+  max-width: 30%;
+  margin-left: 20px; /* Margen izquierdo por defecto */
 }
 
-.sobre-nosotros-section .section-content {
-  flex-grow: 1; /* Ocupa todo el espacio disponible */
+.section-image.right {
+  margin-right: 20px; /* Margen derecho para las secciones alineadas a la derecha */
 }
 
-.sobre-nosotros-section .section-title {
+.section-title {
   font-size: 2rem; /* Tamaño del título aumentado */
   font-weight: bold; /* Negrita */
   margin-bottom: 10px; /* Espacio inferior */
 }
 
-.sobre-nosotros-section .section-description {
+.section-description {
   font-size: 1.2rem; /* Tamaño del texto */
+  text-align: justify; /* Justifica el texto */
+  margin: 10px; /* Margen interno para separación del borde */
 }
+

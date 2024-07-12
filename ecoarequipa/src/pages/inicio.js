@@ -8,7 +8,6 @@ import juegos from '../assets/juegos.png';
 import noticias from '../assets/noticias.png';
 import sobreNosotros from '../assets/sobre-nosotros.png';
 
-
 const Inicio = () => {
   return (
     <div className="inicio">
@@ -19,7 +18,7 @@ const Inicio = () => {
           <img src={text3} style={{ width: '1000px', height: 'auto' }} alt="Texto 3" />
         </div>
       </section>
-      <section className="objective-section section-right">
+      <section className="objective-section section-right section">
         <div className="section-content">
           <div className="section-text">
             <h2 className="section-title">Nuestro Objetivo</h2>
@@ -28,7 +27,7 @@ const Inicio = () => {
           <img className="section-image" src={objetivo} alt="Imagen de objetivo" />
         </div>
       </section>
-      <section className="games-section section-left">
+      <section className="games-section section-left section">
         <div className="section-content">
           <img className="section-image" src={juegos} alt="Imagen de juegos" />
           <div className="section-text">
@@ -37,7 +36,7 @@ const Inicio = () => {
           </div>
         </div>
       </section>
-      <section className="news-section section-right">
+      <section className="news-section section-right section">
         <div className="section-content">
           <div className="section-text">
             <h2 className="section-title">Noticias</h2>
@@ -46,7 +45,7 @@ const Inicio = () => {
           <img className="section-image" src={noticias} alt="Imagen de noticias" />
         </div>
       </section>
-      <section className="sobre-nosotros-section section-left">
+      <section className="sobre-nosotros-section section-left section">
         <div className="section-content">
           <img className="section-image" src={sobreNosotros} alt="Imagen de Sobre Nosotros" />
           <div className="section-text">
