@@ -71,4 +71,35 @@ const Inicio = () => {
   );
 }
 
+
+// Función para verificar si un elemento está visible en la pantalla
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Función para manejar el scroll y la animación de las secciones
+function handleScrollAnimation() {
+  const sections = document.querySelectorAll('.section');
+
+  sections.forEach(section => {
+    if (isElementInViewport(section)) {
+      section.classList.add('visible');
+    }
+  });
+}
+
+// Evento de escucha para el scroll
+window.addEventListener('scroll', handleScrollAnimation);
+
+// Inicialización al cargar la página
+document.addEventListener('DOMContentLoaded', () => {
+  handleScrollAnimation();
+});
+
 export default Inicio;

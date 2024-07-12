@@ -32,22 +32,26 @@ code {
 
 /* Estilos para Header */
 .header {
-  background-color: #119311; /* Verde */
-  font-family: 'Comic Sans MS', sans-serif; /* Cambia la fuente del título */
-  color: hwb(0 100% 0%);
+  position: fixed; /* Fija el header en la parte superior */
+  top: 0; /* Asegura que esté al principio de la ventana */
+  left: 0;
+  right: 0;
+  background-color: #119311;
+  font-family: 'Comic Sans MS', sans-serif;
+  color: white;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 100%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  z-index: 1000; /* Asegura que esté sobre otros elementos */
+  transition: top 0.3s; /* Transición suave al cambiar la posición */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header .header-title {
-  font-size: 40px; /* Tamaño del texto aumentado */
-  font-weight: bold; /* Peso de la fuente */
-  font-family: 'Comic Sans MS', sans-serif; /* Cambia la fuente del título */
-  text-transform: uppercase; /* Texto en mayúsculas */
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .header .logo {
@@ -56,12 +60,12 @@ code {
 }
 
 .header .logo img {
-  width: 60px; /* Ajusta el tamaño del logo según sea necesario */
+  width: 60px;
   margin-right: 10px;
 }
 
 .header .nav {
-  margin-left: auto; /* Alinea la lista a la derecha */
+  margin-left: auto;
 }
 
 .header .nav ul {
@@ -72,19 +76,25 @@ code {
 }
 
 .header .nav ul li {
-  margin-left: 20px; /* Espacio entre elementos de la lista */
+  margin-left: 20px;
 }
 
 .header .nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 20px; /* Tamaño del texto aumentado */
+  font-size: 20px;
 }
 
 .header .nav ul li a:hover {
   text-decoration: underline;
-  color: #FFD700; /* Color dorado en hover */
+  color: #ffd700;
 }
+
+/* Ajuste para el contenido debajo del header */
+.main {
+  padding-top: 80px; /* Ajusta según el alto del header */
+}
+
 
 /* Estilos para Main */
 .main {
@@ -116,124 +126,6 @@ code {
   padding: 1rem;
   width: 100%;
   margin-top: auto; /* Asegura que el footer esté al final del contenedor flex */
-}
-
-/* Estilos específicos para la página de inicio */
-.inicio {
-  background: none; /* Elimina el fondo de toda la página */
-  min-height: 100vh; /* Establece un tamaño mínimo para evitar que el contenido se solape */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #fff; /* Color de texto blanco para que resalte sobre el contenido */
-  max-width: 100%;
-}
-
-.inicio .background-section {
-  background-image: url('./assets/fondo.jpg'); /* Cambia la ruta por la de tu imagen */
-  background-size: cover;
-  background-position: center;
-  width: 100%; /* Ocupa todo el ancho disponible */
-  height: 100vh; /* Ajusta la altura según necesites */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #fff; /* Color de texto blanco para que resalte sobre la imagen */
-}
-
-.inicio .hero {
-  margin-bottom: 2rem;
-}
-
-.inicio .hero .hero-title,
-.inicio .hero .hero-subtitle {
-  font-size: 3rem; /* Ajusta el tamaño del título principal */
-  font-family: 'Comic Sans MS', sans-serif; /* Cambia la fuente del título */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto para mayor contraste */
-  background-color: #70dbdb; /* Fondo celeste medio verdoso */
-  border: 2px solid #fff; /* Borde blanco alrededor del texto */
-  padding: 10px; /* Espacio interno alrededor del texto */
-  border-radius: 10px; /* Esquinas redondeadas */
-}
-
-
-
-/****************************************************************************/
-
-/* Estilos para las secciones */
-
-.objective-section {
-  background-color: #c5e1a5; /* Verde claro */
-}
-
-.games-section {
-  background-color: #ffd54f; /* Amarillo */
-}
-
-.news-section {
-  background-color: #81d4fa; /* Azul claro */
-}
-
-.sobre-nosotros-section {
-  background-color: #f48fb1; /* Rosa */
-}
-
-.section {
-  width: 90%;
-  padding: 20px;
-  margin: 40px auto;
-  font-family: 'Comic Sans MS', sans-serif;
-  border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  color: #1a237e;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 2px solid #ccc;
-}
-
-.section .section-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 20px;
-  width: 100%;
-}
-
-.section .section-text {
-  text-align: justify;
-  flex: 1;
-}
-
-.section .section-image {
-  max-width: 35%;
-  max-height: auto;
-  margin-left: 40px;
-  margin-right: 40px;
-}
-
-.section .section-image:hover {
-  transform: scale(1.05);
-}
-
-.section .section-title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-  text-decoration: none;
-}
-
-.section .section-description {
-  font-size: 1.2rem;
-}
-
-.section-link {
-  display: inline-block;
-  text-decoration: none;
 }
 
 /* Estilos específicos para la página de inicio */
@@ -276,4 +168,90 @@ code {
   border: 2px solid #fff;
   padding: 10px;
   border-radius: 10px;
+}
+
+
+
+/****************************************************************************/
+
+/* Estilos para las secciones */
+
+.objective-section {
+  background-color: #c5e1a5; /* Verde claro */
+}
+
+.games-section {
+  background-color: #ffd54f; /* Amarillo */
+}
+
+.news-section {
+  background-color: #81d4fa; /* Azul claro */
+}
+
+.sobre-nosotros-section {
+  background-color: #f48fb1; /* Rosa */
+}
+
+.section {
+  width: 90%;
+  padding: 20px;
+  margin: 40px auto;
+  font-family: 'Comic Sans MS', sans-serif;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #1a237e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #ccc;
+  opacity: 0; /* Inicialmente ocultas */
+  transform: translateY(20px); /* Desplazamiento hacia abajo */
+  transition: opacity 0.6s ease, transform 0.6s ease; /* Transiciones suaves */
+}
+
+.section.visible {
+  opacity: 1; /* Visible al entrar en la vista */
+  transform: translateY(0); /* Sin desplazamiento */
+}
+
+.section .section-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
+  width: 100%;
+}
+
+.section .section-text {
+  text-align: justify;
+  flex: 1;
+}
+
+.section .section-image {
+  max-width: 40%; /* Ancho máximo de la imagen */
+  max-height: auto; /* Altura máxima de la imagen */
+  margin-left: 40px; /* Espacio a la izquierda de la imagen */
+  margin-right: 40px; /* Espacio a la derecha de la imagen */
+  transition: transform 0.5s ease; /* Transición más lenta */
+}
+
+.section .section-image:hover {
+  transform: scale(1.1); /* Ajusta el factor de escala según sea necesario */
+}
+
+
+.section .section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.section .section-description {
+  font-size: 1.2rem;
+}
+
+.section-link {
+  display: inline-block;
+  text-decoration: none;
 }
