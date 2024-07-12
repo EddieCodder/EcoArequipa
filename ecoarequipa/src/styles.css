@@ -9,6 +9,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Mínimo alto del body para ocupar toda la pantalla */
+  overflow-x: hidden; /* Previene el desbordamiento horizontal */
 }
 
 #root {
@@ -27,6 +28,8 @@ code {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  max-width: 100%;
+  overflow-x: hidden; /* Previene el desbordamiento horizontal */
 }
 
 /* Estilos para Header */
@@ -38,9 +41,9 @@ code {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 100%;
 }
 
-/* Estilos para el título del Header */
 .header .header-title {
   font-size: 35px; /* Tamaño del texto */
   font-weight: bold; /* Peso de la fuente */
@@ -64,6 +67,8 @@ code {
 .header .nav ul {
   list-style-type: none;
   display: flex;
+  padding: 0;
+  margin: 0;
 }
 
 .header .nav ul li {
@@ -85,6 +90,7 @@ code {
 .main {
   padding: 2rem;
   flex-grow: 1;
+  max-width: 100%;
 }
 
 .main .hero {
@@ -122,6 +128,7 @@ code {
   align-items: center;
   text-align: center;
   color: #fff; /* Color de texto blanco para que resalte sobre el contenido */
+  max-width: 100%;
 }
 
 .inicio .background-section {
