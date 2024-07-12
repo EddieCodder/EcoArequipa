@@ -41,7 +41,6 @@ code {
   align-items: center;
   max-width: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-
 }
 
 .header .header-title {
@@ -161,69 +160,120 @@ code {
   border-radius: 10px; /* Esquinas redondeadas */
 }
 
-/* Estilos para las secciones comunes */
-.section {
-  width: calc(100% - 40px); /* Ocupa casi todo el ancho disponible con margen */
-  padding: 20px; /* Añade espacio interno */
-  margin-top: 40px; /* Espacio superior */
-  font-family: 'Comic Sans MS', sans-serif; /* Fuente */
-  border-radius: 20px; /* Esquinas redondeadas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-  color: #1a237e; /* Color de texto azul oscuro */
-  display: flex;
-  justify-content: space-between; /* Alinea elementos en el centro */
-  align-items: center; /* Alinea verticalmente */
-}
 
-.section-left {
-  text-align: left; /* Alinea a la izquierda */
-}
 
-.section-right {
-  text-align: right; /* Alinea a la derecha */
-}
+/****************************************************************************/
 
-/* Estilos específicos para cada sección */
+/* Estilos para las secciones */
+
 .objective-section {
-  background-color: #bbdefb; /* Fondo azul claro */
+  background-color: #c5e1a5; /* Verde claro */
 }
 
 .games-section {
-  background-color: #c5e1a5; /* Fondo verde claro */
+  background-color: #ffd54f; /* Amarillo */
 }
 
 .news-section {
-  background-color: #b2dfdb; /* Fondo celeste claro */
+  background-color: #81d4fa; /* Azul claro */
 }
 
 .sobre-nosotros-section {
-  background-color: #a5d6a7; /* Fondo verde claro más oscuro */
+  background-color: #f48fb1; /* Rosa */
 }
 
-.section-content {
+.section {
+  width: 90%;
+  padding: 20px;
+  margin: 40px auto;
+  font-family: 'Comic Sans MS', sans-serif;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #1a237e;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: 2px solid #ccc;
 }
 
-.section-image {
-  max-width: 30%;
-  margin-left: 20px; /* Margen izquierdo por defecto */
+.section .section-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
+  width: 100%;
 }
 
-.section-image.right {
-  margin-right: 20px; /* Margen derecho para las secciones alineadas a la derecha */
+.section .section-text {
+  text-align: justify;
+  flex: 1;
 }
 
-.section-title {
-  font-size: 2rem; /* Tamaño del título aumentado */
-  font-weight: bold; /* Negrita */
-  margin-bottom: 10px; /* Espacio inferior */
+.section .section-image {
+  max-width: 35%;
+  max-height: auto;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
-.section-description {
-  font-size: 1.2rem; /* Tamaño del texto */
-  text-align: justify; /* Justifica el texto */
-  margin: 10px; /* Margen interno para separación del borde */
+.section .section-image:hover {
+  transform: scale(1.05);
 }
 
+.section .section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.section .section-description {
+  font-size: 1.2rem;
+}
+
+.section-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Estilos específicos para la página de inicio */
+.inicio {
+  background: none;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  max-width: 100%;
+}
+
+.inicio .background-section {
+  background-image: url('./assets/fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.inicio .hero {
+  margin-bottom: 2rem;
+}
+
+.inicio .hero .hero-title,
+.inicio .hero .hero-subtitle {
+  font-size: 3rem;
+  font-family: 'Comic Sans MS', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background-color: #70dbdb;
+  border: 2px solid #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
