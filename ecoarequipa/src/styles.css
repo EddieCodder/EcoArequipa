@@ -341,7 +341,8 @@ code {
   margin-bottom: 20px;
 }
 
-/* Estilo para noticia */
+/*---------------------- Estilo para noticia -------------------*/
+
 .publicaciones-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -349,11 +350,65 @@ code {
 }
 
 .publicacion {
-  margin: 20px 20px;
-  border: 1px solid #ccc;
+  margin: 20px;
+  border: 2px solid #4CAF50; /* Borde más grueso y colorido */
   padding: 20px;
+  border-radius: 10px; /* Bordes redondeados */
+  background-color: #f9f9f9; /* Fondo más claro */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transición suave para efecto interactivo */
 }
 
+.publicacion:hover {
+  transform: translateY(-5px); /* Mover ligeramente hacia arriba al pasar el mouse */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el mouse */
+}
+
+.publicacion img {
+  width: 100%; /* Ajustar al ancho del contenedor */
+  height: auto; /* Mantener la proporción */
+  border-radius: 5px; /* Bordes redondeados para la imagen */
+  margin-bottom: 15px; /* Espacio entre la imagen y el texto */
+}
+.leer-mas-boton {
+  background-color: #2196F3; /* Color azul */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.leer-mas-boton:hover {
+  background-color: #1976D2; /* Azul un poco más oscuro */
+  transform: scale(1.05); /* Efecto de crecimiento */
+}
 .noticias {
   margin-top: 100px; /* Ajusta este valor según la altura de tu barra de navegación */
+}
+
+.filtro-boton {
+  background-color: #4CAF50; /* Color verde */
+  color: white; /* Texto en color blanco para contraste */
+  border: none; /* Sin borde */
+  margin-right: 10px;
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px 20px; /* Espaciado interno */
+  cursor: pointer; /* Cursor en forma de mano al pasar por encima */
+  transition: background-color 0.3s, transform 0.3s; /* Transición suave al cambiar de estado */
+}
+
+.filtro-boton:hover {
+  background-color: #45a049; /* Color verde un poco más oscuro al pasar el mouse */
+  transform: scale(1.1); /* Efecto de crecimiento al pasar el mouse */
+}
+
+.noticia-image {
+  width: 100%;
+  height: auto;
+  max-width: 200px; /* Ajusta el tamaño máximo según tus necesidades */
+  margin: 0 auto 10px;
+  display: block;
+  border-radius: 10px; /* Bordes redondeados para la imagen */
 }

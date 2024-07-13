@@ -1,12 +1,21 @@
 import React, { useState } from 'react';
 import '../styles.css';
+import noticia1 from '../assets/noticia1.png';
+import evento1 from '../assets/evento1.png';
 
-// Simulación de datos de noticias y eventos
 const publicaciones = [
-  { id: 1, tipo: 'noticia', titulo: 'Noticia 1', contenido: 'Contenido de la noticia 1' },
-  { id: 2, tipo: 'evento', titulo: 'Evento 1', contenido: 'Contenido del evento 1' },
-  { id: 3, tipo: 'noticia', titulo: 'Noticia 2', contenido: 'Contenido de la noticia 2' },
-  { id: 4, tipo: 'evento', titulo: 'Evento 2', contenido: 'Contenido del evento 2' },
+  { id: 1, 
+      tipo: 'noticia', 
+      titulo: 'CONSERVACION DE ÁREA NATURAL PROTEGIDA QUE GARANTIZARÁ AGUA EN AREQUIPA', 
+      contenido: 'En Arequipa, Perú, se han destinado más de 4 millones de soles para proteger un lugar muy especial llamado Reserva Nacional Salinas y Aguada Blanca. Este lugar es vital porque nos asegura tener agua limpia para beber, y también es hogar de muchos animales y plantas. Las comunidades locales están ayudando mucho para cuidar este lugar mágico. ¡Es como un gran equipo trabajando juntos para salvar la naturaleza y asegurar que todos tengamos agua limpia! ¿No es increíble?', 
+      imagen: noticia1 },
+
+  { id: 2, 
+      tipo: 'evento', 
+      titulo: 'GRAN FERIA AMBIENTAL POR LA HORA DEL PLANETA', 
+      contenido: '¡Únete a la Gran Feria Ambiental por «La Hora del Planeta»! Este sábado 23 de marzo, te esperamos en la plaza Mayta Cápac de Miraflores para un evento dedicado al medio ambiente. Habrá exposiciones sobre temas ambientales, juegos y talleres para todas las edades. ¡Ven y sé parte de esta bonita actividad! Premiaremos tu participación y juntos apagaremos las luces por 1 hora.', 
+      imagen: evento1 },
+
   // Agrega más noticias y eventos según sea necesario
 ];
 
@@ -23,15 +32,17 @@ const Noticias = () => {
     <div className="noticias">
       <h1>Noticias y Eventos</h1>
       <div>
-        <button onClick={() => filtrarPublicaciones('todos')}>Todos</button>
-        <button onClick={() => filtrarPublicaciones('noticia')}>Noticias</button>
-        <button onClick={() => filtrarPublicaciones('evento')}>Eventos</button>
+        <button className="filtro-boton" onClick={() => filtrarPublicaciones('todos')}>Todos</button>
+        <button className="filtro-boton" onClick={() => filtrarPublicaciones('noticia')}>Noticias</button>
+        <button className="filtro-boton" onClick={() => filtrarPublicaciones('evento')}>Eventos</button>
       </div>
       <div className="publicaciones-grid">
         {publicacionesFiltradas.map(publicacion => (
           <div key={publicacion.id} className="publicacion">
+            <img src={publicacion.imagen} alt={publicacion.titulo} className="noticia-image"/>
             <h2>{publicacion.titulo}</h2>
             <p>{publicacion.contenido}</p>
+            <button className="leer-mas-boton">Leer más</button>
           </div>
         ))}
       </div>
