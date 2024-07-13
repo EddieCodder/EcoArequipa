@@ -390,3 +390,20 @@ code {
 .device-list li.on {
   background-color: #badd3d
 }
+
+/* Estilo para noticia */
+.publicaciones-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0px;
+}
+
+.publicacion {
+  margin: 20px 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.noticias {
+  margin-top: 100px; /* Ajusta este valor según la altura de tu barra de navegación */
+}
