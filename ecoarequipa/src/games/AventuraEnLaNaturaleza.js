@@ -1,43 +1,50 @@
-import React, { useState } from 'react';
-import plantaImg from '../assets/planta.png';
-import animalImg from '../assets/animal.png';
+import React, { useState, useEffect } from 'react';
+import '../styles/AventuraNaturaleza.css';
+import animal1 from '../assets/animal1.png';
+import animal2 from '../assets/animal2.png';
+import animal3 from '../assets/animal3.png';
 
-const AventuraEnLaNaturaleza = () => {
-  const [foundItems, setFoundItems] = useState([]);
+const animals = [animal1, animal2, animal3];
 
-  const items = [
-    { name: 'Planta', img: plantaImg },
-    { name: 'Animal', img: animalImg },
-  ];
+const AventuraNaturaleza = () => {
+  const [animal, setAnimal] = useState(null);
+  const [position, setPosition] = useState({ top: 0, left: 0 });
+  const [score, setScore] = useState(0);
 
-  const handleItemClick = (item) => {
-    if (!foundItems.includes(item.name)) {
-      setFoundItems([...foundItems, item.name]);
-    }
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const newAnimal = animals[Math.floor(Math.random() * animals.length)];
+      const top = Math.floor(Math.random() * 80) + 10; // 10-90% range
+      const left = Math.floor(Math.random() * 80) + 10; // 10-90% range
+      setAnimal(newAnimal);
+      setPosition({ top: `${top}%`, left: `${left}%` });
+    }, 1000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
+  const handleAnimalClick = () => {
+    setScore(score + 1);
+    setAnimal(null); // Hides the animal after click
   };
 
   return (
-    <div className="game-container">
+    <div className="aventura-container">
       <h1>Aventura en la Naturaleza</h1>
-      <p>Explora y encuentra diferentes plantas y animales.</p>
-      <div className="items">
-        {items.map((item, index) => (
-          <div key={index} className="item" onClick={() => handleItemClick(item)}>
-            <img src={item.img} alt={item.name} />
-            <p>{item.name}</p>
-          </div>
-        ))}
+      <div className="aventura-area">
+        {animal && (
+          <img
+            src={animal}
+            alt="Animal"
+            className="animal"
+            style={{ top: position.top, left: position.left }}
+            onClick={handleAnimalClick}
+          />
+        )}
       </div>
-      <div className="found-items">
-        <h2>Items Encontrados:</h2>
-        <ul>
-          {foundItems.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-        </ul>
-      </div>
+      <div className="score">Puntuación: {score}</div>
     </div>
   );
-}
+};
 
-export default AventuraEnLaNaturaleza;
+export default AventuraNaturaleza;

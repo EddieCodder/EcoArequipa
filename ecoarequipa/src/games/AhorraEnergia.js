@@ -1,38 +1,47 @@
-import React, { useState } from 'react';
-import televisorImg from '../assets/televisor.png';
-import luzImg from '../assets/luz.png';
-import computadoraImg from '../assets/computadora.png';
+import React, { useState, useEffect } from 'react';
+import '../styles/AhorrarEnergia.css';
+import luzEncendida from '../assets/luz_encendida.png';
+import luzApagada from '../assets/luz_apagada.png';
 
-const AhorraEnergia = () => {
-  const [devices, setDevices] = useState([
-    { name: 'Televisor', isOn: true, img: televisorImg },
-    { name: 'Luz', isOn: true, img: luzImg },
-    { name: 'Computadora', isOn: true, img: computadoraImg },
-  ]);
+const AhorrarEnergia = () => {
+  const [luces, setLuces] = useState(Array(5).fill(false));
+  const [score, setScore] = useState(0);
 
-  const handleToggle = (index) => {
-    const newDevices = [...devices];
-    newDevices[index].isOn = !newDevices[index].isOn;
-    setDevices(newDevices);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const newLuces = luces.map((luz, index) => Math.random() < 0.5 ? !luz : luz);
+      setLuces(newLuces);
+    }, 1000);
+
+    return () => clearInterval(intervalId);
+  }, [luces]);
+
+  const handleApagarLuz = (index) => {
+    if (luces[index]) {
+      const newLuces = [...luces];
+      newLuces[index] = false;
+      setLuces(newLuces);
+      setScore(score + 1);
+    }
   };
 
   return (
-    <div className="game-container">
-      <h1>Ahorra Energía</h1>
-      <p>Apaga los aparatos electrónicos que no se estén utilizando.</p>
-      <ul className="device-list">
-        {devices.map((device, index) => (
-          <li key={index} className={device.isOn ? 'on' : 'off'}>
-            <img src={device.img} alt={device.name} />
-            {device.name} - {device.isOn ? 'Encendido' : 'Apagado'}
-            <button onClick={() => handleToggle(index)}>
-              {device.isOn ? 'Apagar' : 'Encender'}
-            </button>
-          </li>
+    <div className="energia-container">
+      <h1>Ahorrar Energía</h1>
+      <div className="energia-area">
+        {luces.map((luz, index) => (
+          <img
+            key={index}
+            src={luz ? luzEncendida : luzApagada}
+            alt={luz ? 'Luz encendida' : 'Luz apagada'}
+            className="luz"
+            onClick={() => handleApagarLuz(index)}
+          />
         ))}
-      </ul>
+      </div>
+      <div className="score">Puntuación: {score}</div>
     </div>
   );
-}
+};
 
-export default AhorraEnergia;
+export default AhorrarEnergia;
