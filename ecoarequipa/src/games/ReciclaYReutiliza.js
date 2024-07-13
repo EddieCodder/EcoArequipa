@@ -1,35 +1,48 @@
 import React, { useState } from 'react';
-import reciclaImage from '../assets/game1.jpg';
+import papelImg from '../assets/papel.png';
+import plasticoImg from '../assets/plastico.png';
+import vidrioImg from '../assets/vidrio.png';
 
 const ReciclaYReutiliza = () => {
   const [score, setScore] = useState(0);
-  const [selectedBin, setSelectedBin] = useState('');
 
-  const handleRecycle = (type) => {
-    if (type === selectedBin) {
+  const handleDrop = (event, type) => {
+    event.preventDefault();
+    const data = event.dataTransfer.getData("type");
+    if (data === type) {
       setScore(score + 1);
-    } else {
-      setScore(score - 1);
     }
-    setSelectedBin('');
+  };
+
+  const allowDrop = (event) => {
+    event.preventDefault();
+  };
+
+  const handleDragStart = (event, type) => {
+    event.dataTransfer.setData("type", type);
   };
 
   return (
-    <div className="juego-detalle">
+    <div className="game-container">
       <h1>Recicla y Reutiliza</h1>
-      <img src={reciclaImage} alt="Recicla y Reutiliza" />
-      <p>Aprende a clasificar los diferentes tipos de residuos y la importancia de reciclar.</p>
-      <div className="recycle-game">
-        <div>
-          <button onClick={() => setSelectedBin('plastico')}>Plástico</button>
-          <button onClick={() => setSelectedBin('papel')}>Papel</button>
-          <button onClick={() => setSelectedBin('vidrio')}>Vidrio</button>
-        </div>
-        <button onClick={() => handleRecycle('plastico')}>Reciclar Plástico</button>
-        <button onClick={() => handleRecycle('papel')}>Reciclar Papel</button>
-        <button onClick={() => handleRecycle('vidrio')}>Reciclar Vidrio</button>
+      <p>Coloca cada residuo en el contenedor correcto.</p>
+      <div className="score">Puntuación: {score}</div>
+      <div className="bins">
+        <div className="bin" onDrop={(e) => handleDrop(e, 'papel')} onDragOver={allowDrop}>Papel</div>
+        <div className="bin" onDrop={(e) => handleDrop(e, 'plastico')} onDragOver={allowDrop}>Plástico</div>
+        <div className="bin" onDrop={(e) => handleDrop(e, 'vidrio')} onDragOver={allowDrop}>Vidrio</div>
       </div>
-      <p>Puntuación: {score}</p>
+      <div className="items">
+        <div className="item" draggable onDragStart={(e) => handleDragStart(e, 'papel')}>
+          <img src={papelImg} alt="Papel" />
+        </div>
+        <div className="item" draggable onDragStart={(e) => handleDragStart(e, 'plastico')}>
+          <img src={plasticoImg} alt="Plástico" />
+        </div>
+        <div className="item" draggable onDragStart={(e) => handleDragStart(e, 'vidrio')}>
+          <img src={vidrioImg} alt="Vidrio" />
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,30 +1,36 @@
 import React, { useState } from 'react';
-import ahorraEnergiaImage from '../assets/game2.jpg';
+import televisorImg from '../assets/televisor.png';
+import luzImg from '../assets/luz.png';
+import computadoraImg from '../assets/computadora.png';
 
 const AhorraEnergia = () => {
-  const [appliances, setAppliances] = useState({
-    tv: true,
-    light: true,
-    computer: true
-  });
-  const [score, setScore] = useState(0);
+  const [devices, setDevices] = useState([
+    { name: 'Televisor', isOn: true, img: televisorImg },
+    { name: 'Luz', isOn: true, img: luzImg },
+    { name: 'Computadora', isOn: true, img: computadoraImg },
+  ]);
 
-  const toggleAppliance = (appliance) => {
-    setAppliances({ ...appliances, [appliance]: !appliances[appliance] });
-    setScore(score + (appliances[appliance] ? 1 : -1));
+  const handleToggle = (index) => {
+    const newDevices = [...devices];
+    newDevices[index].isOn = !newDevices[index].isOn;
+    setDevices(newDevices);
   };
 
   return (
-    <div className="juego-detalle">
+    <div className="game-container">
       <h1>Ahorra Energía</h1>
-      <img src={ahorraEnergiaImage} alt="Ahorra Energía" />
-      <p>Identifica aparatos electrónicos y luces encendidas en una casa y apágalos para ahorrar energía.</p>
-      <div className="energy-game">
-        <button onClick={() => toggleAppliance('tv')}>{appliances.tv ? 'Apagar TV' : 'Encender TV'}</button>
-        <button onClick={() => toggleAppliance('light')}>{appliances.light ? 'Apagar Luz' : 'Encender Luz'}</button>
-        <button onClick={() => toggleAppliance('computer')}>{appliances.computer ? 'Apagar Computadora' : 'Encender Computadora'}</button>
-      </div>
-      <p>Puntuación: {score}</p>
+      <p>Apaga los aparatos electrónicos que no se estén utilizando.</p>
+      <ul className="device-list">
+        {devices.map((device, index) => (
+          <li key={index} className={device.isOn ? 'on' : 'off'}>
+            <img src={device.img} alt={device.name} />
+            {device.name} - {device.isOn ? 'Encendido' : 'Apagado'}
+            <button onClick={() => handleToggle(index)}>
+              {device.isOn ? 'Apagar' : 'Encender'}
+            </button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

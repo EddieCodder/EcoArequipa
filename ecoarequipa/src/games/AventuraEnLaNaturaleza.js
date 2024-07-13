@@ -1,27 +1,41 @@
 import React, { useState } from 'react';
-import aventuraImage from '../assets/game3.jpg';
+import plantaImg from '../assets/planta.png';
+import animalImg from '../assets/animal.png';
 
 const AventuraEnLaNaturaleza = () => {
   const [foundItems, setFoundItems] = useState([]);
-  const items = ['árbol', 'flor', 'pájaro', 'río'];
 
-  const handleFindItem = (item) => {
-    if (!foundItems.includes(item)) {
-      setFoundItems([...foundItems, item]);
+  const items = [
+    { name: 'Planta', img: plantaImg },
+    { name: 'Animal', img: animalImg },
+  ];
+
+  const handleItemClick = (item) => {
+    if (!foundItems.includes(item.name)) {
+      setFoundItems([...foundItems, item.name]);
     }
   };
 
   return (
-    <div className="juego-detalle">
+    <div className="game-container">
       <h1>Aventura en la Naturaleza</h1>
-      <img src={aventuraImage} alt="Aventura en la Naturaleza" />
-      <p>Explora la naturaleza y aprende sobre diferentes plantas y animales. Utiliza una guía para identificar especies y descubre la biodiversidad del entorno natural.</p>
-      <div className="nature-game">
-        {items.map(item => (
-          <button key={item} onClick={() => handleFindItem(item)}>{item}</button>
+      <p>Explora y encuentra diferentes plantas y animales.</p>
+      <div className="items">
+        {items.map((item, index) => (
+          <div key={index} className="item" onClick={() => handleItemClick(item)}>
+            <img src={item.img} alt={item.name} />
+            <p>{item.name}</p>
+          </div>
         ))}
       </div>
-      <p>Encontraste: {foundItems.join(', ')}</p>
+      <div className="found-items">
+        <h2>Items Encontrados:</h2>
+        <ul>
+          {foundItems.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
