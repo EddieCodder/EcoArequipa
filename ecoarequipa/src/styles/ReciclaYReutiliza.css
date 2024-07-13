@@ -1,0 +1,55 @@
+.game-container {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .game-area {
+    position: relative;
+    width: 70%; /* Ajusta según tus necesidades */
+    height: 800px; /* Ajusta según tus necesidades */
+    background-color: #f0f0f0;
+    overflow: hidden;
+    border: 2px solid #000; /* Límites visibles */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Alinea los tachos al fondo */
+  }
+  
+  .falling-item {
+    position: absolute;
+    width: 100px; /* Ajusta el tamaño según tus necesidades */
+    height: 100px; /* Ajusta el tamaño según tus necesidades */
+    transition: top 0.1s linear, left 0.1s linear;
+  }
+  
+  .bins {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .bin-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .bin-label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Ajusta según tus necesidades */
+  }
+  
+  .bin {
+    width: 200px; /* Ajusta el tamaño según tus necesidades */
+    height: 200px; /* Ajusta el tamaño según tus necesidades */
+  }
+  
+  .score {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  
