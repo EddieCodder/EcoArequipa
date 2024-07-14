@@ -38,12 +38,12 @@ const Noticias = () => {
       </div>
       <div className="publicaciones-grid">
         {publicacionesFiltradas.map(publicacion => (
-          <div key={publicacion.id} className="publicacion">
-            <img src={publicacion.imagen} alt={publicacion.titulo} className="noticia-image"/>
-            <h2>{publicacion.titulo}</h2>
-            <p>{publicacion.contenido}</p>
-            <button className="leer-mas-boton">Leer más</button>
-          </div>
+          <div className={`publicacion ${publicacion.tipo}`} key={publicacion.id}>
+          <img src={publicacion.imagen} alt={publicacion.titulo} className="noticia-image"/>
+          <h2>{publicacion.titulo}</h2>
+          <p>{publicacion.contenido}</p>
+          <button className="leer-mas-boton">Leer más</button>
+        </div>
         ))}
       </div>
     </div>

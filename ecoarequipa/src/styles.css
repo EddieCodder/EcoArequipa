@@ -350,8 +350,8 @@ code {
 }
 
 .publicacion {
-  margin: 20px;
-  border: 2px solid #4CAF50; /* Borde más grueso y colorido */
+  margin: 60px;
+  border: 2px solid #ccc; /* Cambiado a color gris */
   padding: 20px;
   border-radius: 10px; /* Bordes redondeados */
   background-color: #f9f9f9; /* Fondo más claro */
@@ -359,6 +359,9 @@ code {
   transition: transform 0.3s, box-shadow 0.3s; /* Transición suave para efecto interactivo */
 }
 
+.publicacion p {
+  text-align: justify; /* Agrega esta línea */
+}
 .publicacion:hover {
   transform: translateY(-5px); /* Mover ligeramente hacia arriba al pasar el mouse */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el mouse */
@@ -370,8 +373,16 @@ code {
   border-radius: 5px; /* Bordes redondeados para la imagen */
   margin-bottom: 15px; /* Espacio entre la imagen y el texto */
 }
+
+.publicacion.noticia {
+  background-color: #7dbbc3; /* Azul verdoso para noticias */
+}
+
+.publicacion.evento {
+  background-color: #b9e4c9; /* Verde claro para eventos */
+}
 .leer-mas-boton {
-  background-color: #2196F3; /* Color azul */
+  background-color: #4CAF50; /* Verde principal */
   color: white;
   border: none;
   border-radius: 5px;
@@ -381,7 +392,7 @@ code {
 }
 
 .leer-mas-boton:hover {
-  background-color: #1976D2; /* Azul un poco más oscuro */
+  background-color: #39843c; /* Verde oscuro */
   transform: scale(1.05); /* Efecto de crecimiento */
 }
 .noticias {
@@ -412,3 +423,4 @@ code {
   display: block;
   border-radius: 10px; /* Bordes redondeados para la imagen */
 }
+
