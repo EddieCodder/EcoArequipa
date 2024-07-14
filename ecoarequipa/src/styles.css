@@ -446,3 +446,8 @@ code {
   border-radius: 10px; /* Bordes redondeados para la imagen */
 }
 
+.noticias-logo {
+  width: 800px; /* Ajusta el ancho como desees */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
