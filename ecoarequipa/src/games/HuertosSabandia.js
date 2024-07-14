@@ -1,26 +1,72 @@
 import React, { useState } from 'react';
-import huertoImage from '../assets/game7.jpg';
+import '../styles/HuertoSabandia.css';
+import seed from '../assets/seed.png';
+import wateringCan from '../assets/watering_can.png';
+import vegetable from '../assets/vegetable.png';
+import plot from '../assets/plot.jpg';
 
-const HuertosSabandia = () => {
-  const [plants, setPlants] = useState([]);
+const HuertoSabandia = () => {
+  const [plots, setPlots] = useState(Array(5).fill(null)); // 5 plots for planting
+  const [score, setScore] = useState(0);
 
-  const handlePlant = (plant) => {
-    setPlants([...plants, plant]);
+  const handlePlantSeed = (index) => {
+    const newPlots = [...plots];
+    if (newPlots[index] === null) {
+      newPlots[index] = 'seed';
+      setPlots(newPlots);
+    }
+  };
+
+  const handleWaterPlant = (index) => {
+    const newPlots = [...plots];
+    if (newPlots[index] === 'seed') {
+      newPlots[index] = 'watered';
+      setPlots(newPlots);
+    }
+  };
+
+  const handleGrowVegetable = (index) => {
+    const newPlots = [...plots];
+    if (newPlots[index] === 'watered') {
+      newPlots[index] = 'vegetable';
+      setPlots(newPlots);
+    }
+  };
+
+  const handleHarvestVegetable = (index) => {
+    const newPlots = [...plots];
+    if (newPlots[index] === 'vegetable') {
+      newPlots[index] = null;
+      setScore(score + 1);
+      setPlots(newPlots);
+    }
   };
 
   return (
-    <div className="juego-detalle">
-      <h1>Huertos de Sabandía</h1>
-      <img src={huertoImage} alt="Huertos de Sabandía" />
-      <p>Planta, cuida y cosecha un huerto en Sabandía, aprendiendo sobre la agricultura sostenible y la importancia de los alimentos orgánicos.</p>
-      <div className="garden-game">
-        <button onClick={() => handlePlant('zanahoria')}>Plantar zanahoria</button>
-        <button onClick={() => handlePlant('lechuga')}>Plantar lechuga</button>
-        <button onClick={() => handlePlant('tomate')}>Plantar tomate</button>
+    <div className="huerto-container">
+      <h1>Huerto de Sabandía</h1>
+      <div className="huerto-area">
+        {plots.map((plotState, index) => (
+          <div 
+            key={index} 
+            className="plot" 
+            onClick={() => {
+              if (plotState === null) handlePlantSeed(index);
+              else if (plotState === 'seed') handleWaterPlant(index);
+              else if (plotState === 'watered') handleGrowVegetable(index);
+              else if (plotState === 'vegetable') handleHarvestVegetable(index);
+            }}
+          >
+            <img src={plot} alt="Plot" className="plot-img" />
+            {plotState === 'seed' && <img src={seed} alt="Seed" className="seed-img" />}
+            {plotState === 'watered' && <img src={wateringCan} alt="Watering Can" className="watering-can-img" />}
+            {plotState === 'vegetable' && <img src={vegetable} alt="Vegetable" className="vegetable-img" />}
+          </div>
+        ))}
       </div>
-      <p>Plantas en el huerto: {plants.join(', ')}</p>
+      <div className="score">Puntuación: {score}</div>
     </div>
   );
-}
+};
 
-export default HuertosSabandia;
+export default HuertoSabandia;

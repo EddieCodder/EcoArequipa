@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import limpiezaImage from '../assets/game5.jpg';
+import limpiezaImage from '../assets/game7.jpg';
 
 const LimpiezaRioChili = () => {
   const [score, setScore] = useState(0);
