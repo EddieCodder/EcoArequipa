@@ -5,12 +5,14 @@ import mision from '../assets/text2.png';
 import ofrecemos from '../assets/text3.png';
 import equipo from '../assets/objetivo.png';
 import contacto from '../assets/juegos.png';
+import nosotros from '../assets/nosotros.png';
 
 const Nosotros = () => {
   return (
     <div className="nosotros">
-      <h1>NOSOTROS</h1>
-      <section className="section-block">
+	<h1>NOSOTROS</h1> 
+	<img src={nosotros} alt="Nosotros" />
+	  <section className="section-block">
         <h2>Introducción</h2>
         <p>EcoArequipa es una plataforma web interactiva diseñada para educar y concienciar a los niños sobre la importancia del cuidado medioambiental en Arequipa.</p>
         <img src={introduccion} alt="Introducción" />
