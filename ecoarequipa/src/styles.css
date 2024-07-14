@@ -375,11 +375,11 @@ code {
 }
 
 .publicacion.noticia {
-  background-color: #7dbbc3; /* Azul verdoso para noticias */
+  background-color: #87a4f3; /* Azul verdoso para noticias */
 }
 
 .publicacion.evento {
-  background-color: #b9e4c9; /* Verde claro para eventos */
+  background-color: #47d8ac; /* Verde claro para eventos */
 }
 .leer-mas-boton {
   background-color: #4CAF50; /* Verde principal */
