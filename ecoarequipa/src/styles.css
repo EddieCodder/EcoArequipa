@@ -400,7 +400,29 @@ code {
 }
 
 .filtro-boton {
-  background-color: #4CAF50; /* Color verde */
+  background-color: #215a9c; /* Color verde */
+  color: white; /* Texto en color blanco para contraste */
+  border: none; /* Sin borde */
+  margin-right: 10px;
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px 20px; /* Espaciado interno */
+  cursor: pointer; /* Cursor en forma de mano al pasar por encima */
+  transition: background-color 0.3s, transform 0.3s; /* Transición suave al cambiar de estado */
+}
+
+.filtro-boton-evento {
+  background-color: #47d8ac;; /* Color verde */
+  color: white; /* Texto en color blanco para contraste */
+  border: none; /* Sin borde */
+  margin-right: 10px;
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px 20px; /* Espaciado interno */
+  cursor: pointer; /* Cursor en forma de mano al pasar por encima */
+  transition: background-color 0.3s, transform 0.3s; /* Transición suave al cambiar de estado */
+}
+
+.filtro-boton-noticia {
+  background-color: #87a4f3;/* Color verde */
   color: white; /* Texto en color blanco para contraste */
   border: none; /* Sin borde */
   margin-right: 10px;

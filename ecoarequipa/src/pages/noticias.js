@@ -33,8 +33,8 @@ const Noticias = () => {
       <h1>Noticias y Eventos</h1>
       <div>
         <button className="filtro-boton" onClick={() => filtrarPublicaciones('todos')}>Todos</button>
-        <button className="filtro-boton" onClick={() => filtrarPublicaciones('noticia')}>Noticias</button>
-        <button className="filtro-boton" onClick={() => filtrarPublicaciones('evento')}>Eventos</button>
+        <button className="filtro-boton-noticia" onClick={() => filtrarPublicaciones('noticia')}>Noticias</button>
+        <button className="filtro-boton-evento" onClick={() => filtrarPublicaciones('evento')}>Eventos</button>
       </div>
       <div className="publicaciones-grid">
         {publicacionesFiltradas.map(publicacion => (
