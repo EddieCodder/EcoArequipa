@@ -3,8 +3,8 @@ import '../nosotros.css';
 import introduccion from '../assets/introduccion-image.png';
 import mision from '../assets/text2.png';
 import ofrecemos from '../assets/text3.png';
-import equipo from '../assets/objetivo.png';
-import contacto from '../assets/juegos.png';
+import equipo from '../assets/sobre-nosotros.png';
+import contacto from '../assets/objetivo.png';
 import nosotros from '../assets/nosotros.png';
 
 const Nosotros = () => {
