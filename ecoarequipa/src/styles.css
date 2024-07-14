@@ -451,3 +451,6 @@ code {
   height: auto; /* Mantiene la proporción de la imagen */
 }
 
+.texto-justificado {
+  text-align: center; /* Justifica el texto */
+}

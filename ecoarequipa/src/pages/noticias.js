@@ -42,7 +42,21 @@ const Noticias = () => {
   return (
     <div className="noticias">
       <img src={noticiaslogo} alt="Noticias" className="noticias-logo"/>
-      <p>En esta sección encontrarás las mejores noticias y eventos divertidos en donde puedes participar.</p>
+      <p className="texto-justificado">En Eco Arequipa queremos que cada niño se sienta inspirado y motivado para cuidar nuestro hermoso planeta. Descubre: <br></br><br></br>
+Noticias Verdes 🌿<br></br><br></br>
+- Descubrimientos Naturales: Aprende sobre las plantas y animales que habitan en Arequipa, y los nuevos descubrimientos que hacen los científicos locales.<br></br>
+- Proyectos Ecológicos: Descubre los proyectos que se están realizando para cuidar nuestro medio ambiente y cómo puedes participar.<br></br>
+- Historias Inspiradoras: Conoce a otros niños que están haciendo cosas increíbles para proteger la naturaleza. <br></br>
+<br></br>
+Eventos Ecológicos 🎉<br></br><br></br>
+
+- Ferias y Festivales Verdes: Información sobre ferias de ecología, festivales de reciclaje y otros eventos ecológicos donde puedes divertirte y aprender.<br></br>
+- Talleres y Actividades: Participa en talleres de jardinería, reciclaje creativo y actividades al aire libre organizadas en Arequipa.<br></br>
+- Concursos Ecológicos: ¡Muestra tu creatividad y amor por la naturaleza en nuestros concursos de dibujo, fotografía y manualidades ecológicas!<br></br>
+
+</p>
+
+
       <div>
         <button className="filtro-boton" onClick={() => filtrarPublicaciones('todos')}>Todos</button>
         <button className="filtro-boton-noticia" onClick={() => filtrarPublicaciones('noticia')}>Noticias</button>
